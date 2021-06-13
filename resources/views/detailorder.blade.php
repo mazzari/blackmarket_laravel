@@ -51,7 +51,7 @@
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-							<a href="{{url('chekout')}}/{{$barang->id}}" class="add-to-cart btn btn-default" type="button">Purchase</a>
+							<a href="{{url('checkout')}}/{{$barang->id}}" class="add-to-cart btn btn-default" type="button">Purchase</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

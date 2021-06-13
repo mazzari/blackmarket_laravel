@@ -1,19 +1,36 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Order;
+use App\Models\Order as orderan;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 use Illuminate\Support\Carbon;
 use App\Models\Transaksi;
+use App\Models\DetailOrder;
 class OrderController extends Controller
 {
-    public function simpan(Barang $barang,Request $request){
-    $order=new Order;
-    $order->id_barang=$barang->id;
-    $order->total_harga=$barang->harga;
-    $order->status=0;
-    $order->save();
+    public function simpan(Request $request)
+    {
+        $produk = Barang::where('id', $request->id_barang)->first();
+        $data = [
+            'id_barang' => $produk->id,
+            'total_harga' => $produk->harga,
+            'email' => $request->email??'email',
+            'nama' => $request->nama??'nama',
+            'alamat' => $request->alamat,
+            'nomor_telepon' => $request->telpon,
+            'buktipembayaran' => $request->buktipembayaran??'kosong',
+            'status' => 1 
+        ];
+    $p = orderan::create($data);
+    // $order=new Order;
+    // $order->fill($request->all());
+    // $order->status=0;
+    // $order->save();
+    // $detail=new DetailOrder;
+    // $detail->order_id= $order->id;
+    // $detail->barang_id=$barang->id;
+    // $detail->save();
     
         return redirect('home');
     }

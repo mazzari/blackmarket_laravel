@@ -17,6 +17,12 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->integer('id_barang');
             $table->integer('total_harga');
+            $table->string('email');
+            $table->string('nama');
+            $table->text('alamat');
+            $table->string('nomor_telepon');
+            $table->tinyInteger('carabayar')->default(1);
+            $table->mediumText('buktipembayaran')->nullable();
             $table->tinyInteger('status');
             $table->timestamps();
         });

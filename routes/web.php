@@ -9,7 +9,6 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserAdminController;
 use App\Http\Controllers\TransaksiController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +21,7 @@ use App\Http\Controllers\TransaksiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/login',[TampilanController::class,'login']);
 Route::get('/home',[TampilanController::class,'home']);
@@ -35,7 +34,7 @@ Route::post('/register', [AuthController::class,'register_user']);
 Route::post('/login', [AuthController::class,'login']); 
 Route::get('detailorder/{barang}',[TampilanController::class,'detailorder']);
 //order
-Route::get('pesan/{barang}',[OrderController::class,'simpan']);
+Route::post('pesan/{barang}',[OrderController::class,'simpan'])->name('checkouts');
 //category
 Route::get('/admin/category',[CategoryController::class,'index']);
 Route::get('admin/category/add',[CategoryController::class,'create']);
@@ -73,6 +72,8 @@ Route::get('admin/order/hapus/{order}',[OrderController::class,'destroy']);
 Route::get('admin/order/confrim/{order}',[OrderController::class,'confrim']);
 //transaksi 
 Route::get('/admin/transaksi',[TransaksiController::class,'index']);
+
+
 
 //user
 Route::get('user/home',[TampilanController::class,'user_home']);

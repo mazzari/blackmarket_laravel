@@ -148,9 +148,12 @@
             <form
               id="edd_purchase_form"
               class="edd_form"
-              action="#"
+              action="{{ route('checkouts',[$barang['id']])}}"
               method="POST"
+              enctype="multipart/form-data"
             >
+            @csrf
+            <input type="hidden" name="id_barang" value="{{ $barang['id'] }}">
               <fieldset id="edd_checkout_user_info">
                 <legend>Personal Info</legend>
                 <p id="edd-email-wrap">
@@ -161,10 +164,9 @@
                   <input
                     class="edd-input required"
                     type="email"
-                    name="edd_email"
+                    name="email"
                     placeholder="Email address"
                     id="edd-email"
-                    value="email"
                   />
                 </p>
                 <p id="edd-first-name-wrap">
@@ -174,11 +176,11 @@
                   <input
                     class="edd-input required"
                     type="text"
-                    name="edd_first"
+                    name="nama"
                     placeholder="name"
                     id="edd-first"
                     value="name"
-                    required=""
+                    required
                   />
                 </p>
                 <p id="edd-first-name-wrap">
@@ -188,11 +190,11 @@
                   <input
                     class="edd-input required"
                     type="text"
-                    name="edd_first"
+                    name="alamat"
                     placeholder="alamat"
                     id="edd-first"
                     value="alamat"
-                    required=""
+                    required
                   />
                 </p>
                 <p id="edd-last-name-wrap">
@@ -200,7 +202,7 @@
                   <input
                     class="edd-input"
                     type="text"
-                    name="edd_last"
+                    name="telpon"
                     id="edd-last"
                     placeholder="nomor telepon"
                     value="nomor_tlp"
@@ -208,7 +210,7 @@
                 </p>
               </head>
               <body>
-              <form action="{{url('pesan')}}/{{$barang->id}}" method="post">
+              <form action="{{url('pesan')}}/{{$barang->id}}" method="post" enctype="multipart/form-data">
                     <p>Cara Bayar
                   <select name='cara_bayar' id="jenis-pembayaran" onchange="chekjenis()" class="form-control">
                   <option value='transfer'>transfer</option>
