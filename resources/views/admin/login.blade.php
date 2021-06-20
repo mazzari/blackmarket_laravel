@@ -29,7 +29,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-color: grey;">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" method="POST" action="{{url('admin')}}">
+				<form class="login100-form validate-form" method="POST" action="{{url('login/admin')}}">
 					<div class="login100-form-avatar">
 						<img src="images/avatar-01.jpg" alt="AVATAR">
 					</div>

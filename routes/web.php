@@ -38,12 +38,10 @@ Route::get('/infopersonal',[TampilanController::class,'personalinfo']);
 Route::get('detailorder/{barang}',[TampilanController::class,'detailorder']);
 //order
 Route::post('pesan/{barang}',[OrderController::class,'simpan'])->name('checkouts');
-<<<<<<< HEAD
 
-Route::get('admin/login',[TampilanController::class,'adminLogin']);
-=======
-Route::get('detailtransaksi',[TampilanController::class,'detailtransaksi']);
->>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
+Route::get('/admin/login',[TampilanController::class,'adminlogin']);
+Route::post('/login/admin', [AuthController::class,'login']); 
+
 //category
 Route::get('admin/category',[CategoryController::class,'index']);
 Route::get('admin/category/add',[CategoryController::class,'create']);

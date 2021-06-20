@@ -29,39 +29,28 @@ class AuthController extends Controller
               
            if(Auth::attempt(['email' => $req->email, 'password' => $req->password,'admin'=>1]))
              {
-                $req->session()->put('nama','Diki Alfarabi Hadi');
                 return redirect('admin/index');
 
             }
                else if(Auth::attempt(['email' => $req->email, 'password' => $req->password,'admin'=>0])){
-<<<<<<< HEAD
-                  $req->session()->put('nama','Diki Alfarabi Hadi');
-=======
                   $req->session()->push('email', $req->email);
                   $data = Session::all();
                   
->>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
                   return redirect('home');
                   
                }
              else
                 {
-               //Login Fail
-               Session::flash('error', 'Email atau password salah');
-               return redirect('login');
+   //Login Fail
+   Session::flash('error', 'Email atau password salah');
+   return redirect('login');
              }
 
         }
 
-<<<<<<< HEAD
-        public function logout(Request $request){
-            $request->session()->flush();
-            return redirect("login");
-=======
         public function logout(Request $req){
            $req->session()->flush();
            return redirect('home');
->>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
         }
 }
    
