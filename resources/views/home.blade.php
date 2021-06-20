@@ -8,6 +8,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 	<link href={{asset('css/bootstrap.min.css') }} rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link href={{asset('./css/style.css') }} rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -15,8 +17,13 @@
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
+<<<<<<< HEAD
 	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top" id="navbar">
 	<div class="container" >
+=======
+	{{-- <nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+	<div class="container">
+>>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
 		<div class="navbar-header">
 			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
 			<i class="fa fa-bars"></i>
@@ -28,16 +35,25 @@
 		<ul class="nav navbar-nav navbar-right">
 				<li class="propClone"><a href="{{url('home') }}">Home</a></li>
 				<li class="propClone"><a href="{{url('shop')}}">Shop</a></li>
-				<li class="propClone"><a href="{{url('checkout')}}">Checkout</a></li>
 				<li class="propClone"><a href="{{url('contact')}}">Contact</a></li>
-				<li class="propClone"><a href="{{url('register')}}">Register</a></li>
+				<li class="propClone"><a href=""><span class="material-icons">shopping_cart
+				</span></a></li>
 				<li class="propClone"><a href="{{url('login')}}">Login</a></li>
+<<<<<<< HEAD
 				<li class="propClone"><a href="{{url('logout')}}">logout</a></li>
 			</ul>
 		</div>
 	</div>
 	</nav>
 
+=======
+			<li class="propClone"><a href="{{url('register')}}">Register</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav> --}}
+	@extends('navbar')
+>>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">

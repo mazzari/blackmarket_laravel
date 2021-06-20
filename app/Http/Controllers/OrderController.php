@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Order as orderan;
+use App\Models\Order as orders;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 use Illuminate\Support\Carbon;
@@ -14,15 +14,18 @@ class OrderController extends Controller
         $produk = Barang::where('id', $request->id_barang)->first();
         $data = [
             'id_barang' => $produk->id,
-            'total_harga' => $produk->harga,
+            'harga' => $produk->harga,
             'email' => $request->email??'email',
             'nama' => $request->nama??'nama',
             'alamat' => $request->alamat,
             'nomor_telepon' => $request->telpon,
             'buktipembayaran' => $request->buktipembayaran??'kosong',
-            'status' => 1 
+            'status' => 1,
+            'quantity' => $request->quantity,
+            'total_order' => $request->quantity*$produk->harga
         ];
-    $p = orderan::create($data);
+    $p = orders::create($data);
+
     // $order=new Order;
     // $order->fill($request->all());
     // $order->status=0;
@@ -32,7 +35,7 @@ class OrderController extends Controller
     // $detail->barang_id=$barang->id;
     // $detail->save();
     
-        return redirect('home');
+        return redirect('detailtransaksi');
     }
         public function index()
             {

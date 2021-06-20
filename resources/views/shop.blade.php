@@ -9,6 +9,9 @@
 <link href= "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link href= {{ asset('css/style.css') }} rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
@@ -16,6 +19,7 @@
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
+<<<<<<< HEAD
 	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -38,6 +42,9 @@
 		</div>
 	</div>
 	</nav>
+=======
+	@extends('navbar')
+>>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -75,13 +82,13 @@
 		<div class="productbox">
 			<div class="fadeshop">
 				<div class="captionshop text-center" style="display: none;">
-					<h3>{{$barang->nama}}</h3>
+					<h3><a href="{{url('detailorder')}}/{{$barang->id}}" style="color:white;">{{$barang->nama}} </a></h3>
 					<p>
 						{{$barang->detail}}
 					</p>
 					<p>
 						<a href="{{url('chekout')}}/{{$barang->id}}" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-						<a href="{{url('detailorder')}}/{{$barang->id}}" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+						<a href="{{url('detailorder')}}/{{$barang->id}}" class="learn-more detailslearn"><span class="material-icons" style=": 0">shopping_cart</span></a>
 					</p>
 				</div>
 				<span class="maxproduct"><img src="{{$barang->photo}}" alt="images/jaket/jaketIjo1.jpg"></span>

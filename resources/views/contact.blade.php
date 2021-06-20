@@ -9,12 +9,15 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
+<<<<<<< HEAD
 	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -36,6 +39,9 @@
 		</div>
 	</div>
 	</nav>
+=======
+	@extends('navbar')
+>>>>>>> 551ba1b54b98a4aa249d735bc5bbe709bad36473
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">

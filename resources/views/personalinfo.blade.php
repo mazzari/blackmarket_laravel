@@ -24,8 +24,7 @@
     <!-- HEADER =============================-->
     <header class="item header margin-top-0">
       <div class="wrapper">
-        @extends('navbar')
-        <div class="container">
+        @extends('navbar')<div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
               <div class="text-pageheader">
@@ -67,42 +66,11 @@
             <form
               id="edd_purchase_form"
               class="edd_form"
-              action="{{ route('infopersonal',[$barang['id']])}}"
+              {{-- action="{{ route('checkouts',[$barang['id']])}}" --}}
               method="POST"
               enctype="multipart/form-data"
             >
             <table id="edd_checkout_cart" class="ajaxed">
-              <thead>
-                <tr class="edd_cart_header_row">
-                  <th class="edd_cart_item_name">Item Name</th>
-                  <th class="edd_cart_item_price">Item Price</th>
-              
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="edd_cart_item"
-                  id="edd_cart_item_0_25"
-                  data-download-id="25"
-                >
-                  <td class="edd_cart_item_name">
-                    <div class="edd_cart_item_image">
-                      <img
-                        width="150"
-                        height="150"
-                        src="{{$barang->photo}}"
-                        alt=""
-                      />
-                    </div>
-                    <span class="edd_checkout_cart_item_title"
-                      >{{$barang->nama}}</span
-                    >
-                  </td>
-                  <td class="edd_cart_item_price">{{$barang->harga}}</td>
-                  
-                  
-                </tr>
-              </tbody>
               <tfoot>
                 
                 <tr
@@ -111,26 +79,121 @@
                 >
                   <th colspan="5" class="edd_cart_discount"></th>
                 </tr>
-                <tr class="edd_cart_footer_row">
+                {{-- <tr class="edd_cart_footer_row">
                   <th class="edd_cart_total">
                     Total:
                     <span
                       class="edd_cart_amount"
                       data-subtotal=""
                       data-total=""
-                      >{{$barang->harga*1+15000}}</span
-                    >
+                      {{-- >{{$barang->harga*1+15000}}</span> --}}
+                    
                    
-                  </th>
+                  {{-- </th>
                   <th>
                     <span>Quantity : </span> <input type="number" name="quantity" id="quantity" value="1" max="10" min="1" step="1">
-                  </th>
+                  </th> --}} 
                 
                 </tr>
               </tfoot>
             </table>
             @csrf
-            <input type="hidden" name="id_barang" value="{{ $barang['id'] }}">
+            {{-- <input type="hidden" name="id_barang" value="{{ $barang['id'] }}"> --}}
+              <fieldset id="edd_checkout_user_info">
+                <h3>Personal Info</h3>
+                <br/>
+                <p id="edd-email-wrap">
+                  <label class="edd-label" for="edd-email">
+                    Email Address
+                    <span class="edd-required-indicator">*</span></label
+                  >
+                  <input
+                    class="edd-input required"
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    id="edd-email"
+                  />
+                </p>
+                <p id="edd-first-name-wrap">
+                  <label class="edd-label" for="edd-first">
+                     Name <span class="edd-required-indicator">*</span>
+                  </label>
+                  <input
+                    class="edd-input required"
+                    type="text"
+                    name="nama"
+                    placeholder="name"
+                    id="edd-first"
+                    value="name"
+                    required
+                  />
+                </p>
+                <p id="edd-first-name-wrap">
+                  <label class="edd-label" for="edd-first">
+                    alamat <span class="edd-required-indicator">*</span>
+                  </label>
+                  <input
+                    class="edd-input required"
+                    type="text"
+                    name="alamat"
+                    placeholder="alamat"
+                    id="edd-first"
+                    value="alamat"
+                    required
+                  />
+                </p>
+                <p id="edd-last-name-wrap">
+                  <label class="edd-label" for="edd-last"> Nomor telepon </label>
+                  <input
+                    class="edd-input"
+                    type="text"
+                    name="telpon"
+                    id="edd-last"
+                    placeholder="nomor telepon"
+                    value="nomor_tlp"
+                  />
+                </p>
+
+                {{-- <p>Cara Bayar
+                  <select name='cara_bayar' id="jenis-pembayaran" onchange="chekjenis()" class="form-control">
+                  <option value='transfer'>transfer</option>
+                  <option value='Cash On Delivery'>Cash On Delivery</option>
+                 
+                  </select>
+                  </p>
+                  <input type="hidden" value="1" name="bank">
+                  <div id="bank">
+                    <div class="form-group">
+                      <label> Bank </label>
+                      <select name="bank" >
+                        {{-- @foreach ($banks as $bank) --}}
+                            {{-- <option value="{{$bank->id}}">{{$bank->nama_bank}}({{$bank->nomor_rekening}})/{{$bank->pemilik}}</option> --}}
+                        {{-- @endforeach --}}
+                      {{-- </select>
+                    </div>
+                    <div class="form-group">
+                    <label>bukti pembayaran </label>
+                    <input type="file" name="buktipembayaran" id="photofile" class="from-file">
+                </div>
+                  </div>
+                  --}} 
+              </fieldset>
+              <fieldset id="edd_purchase_submit">
+                {{-- <p id="edd_final_total_wrap">
+                  <strong>Purchase Total:</strong>
+                  <span
+                    class="edd_cart_amount"
+                    data-subtotal=""
+                    data-total=""
+                    ></span
+                  >
+                </p> --}}
+                
+              </head>
+              <body>
+              
+                  
                 <input type="hidden" name="edd_action" value="purchase" />
                 <input type="hidden" name="edd-gateway" value="manual" />
                 <input

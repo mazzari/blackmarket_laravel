@@ -24,6 +24,8 @@ class CreateOrdersTable extends Migration
             $table->tinyInteger('carabayar')->default(1);
             $table->mediumText('buktipembayaran')->nullable();
             $table->tinyInteger('status');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
