@@ -39,7 +39,7 @@ font-size: 16px;">  &nbsp; <a href="{{url('home')}}" class="btn btn-danger squar
 				
 					
                     <li>
-                        <a  href="{{url('admin/index')}}"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a  href="{{url('admin/index')}}" class="active-menu"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                       <li>
                         <a  href="{{url('admin/datapelanggan')}}"><i class="fa fa-desktop fa-3x"></i> Data pelanggan</a>
@@ -57,7 +57,7 @@ font-size: 16px;">  &nbsp; <a href="{{url('home')}}" class="btn btn-danger squar
                         <a  href="{{url('admin/barang')}}"><i class="fa fa-table fa-3x"></i>Barang</a>
                     </li>
                   <li>
-                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
                     </li>	
                 </ul>
                

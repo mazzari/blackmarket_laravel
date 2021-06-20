@@ -58,11 +58,12 @@ font-size: 16px;"> <a href="{{url('home')}}" class="btn btn-danger square-btn-ad
                         <a  href="{{url('admin/barang')}}"><i class="fa fa-table fa-3x"></i>Barang</a>
                     </li>
                     <li>
+                        <a  href="{{url('admin/transaksi')}}"class="active-menu" ><i class="fa fa-table fa-3x"></i>transaksi</a>
+                    </li>
+                    <li>
                         <a  href="{{url('admin/order')}}"><i class="fa fa-table fa-3x"></i>Order</a>
                     </li>
-                  <li>
-                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                  
                 </ul>
                
             </div>

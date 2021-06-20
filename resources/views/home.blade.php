@@ -15,8 +15,8 @@
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
-	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
-	<div class="container">
+	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top" id="navbar">
+	<div class="container" >
 		<div class="navbar-header">
 			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
 			<i class="fa fa-bars"></i>
@@ -32,10 +32,12 @@
 				<li class="propClone"><a href="{{url('contact')}}">Contact</a></li>
 				<li class="propClone"><a href="{{url('register')}}">Register</a></li>
 				<li class="propClone"><a href="{{url('login')}}">Login</a></li>
+				<li class="propClone"><a href="{{url('logout')}}">logout</a></li>
 			</ul>
 		</div>
 	</div>
 	</nav>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -256,7 +258,7 @@
 					<img src="images/Thrifting sticker.jpg" alt="Awesome Support">
 					<p>
 						the magic of shopping secondhand is that you dont find the right clothes 
-												the right clothes find you <br
+												the right clothes find you <br />
 					</p>
 					<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 				</div>

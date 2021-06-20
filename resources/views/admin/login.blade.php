@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- login_blackmarket -->
-	<title>Login blackmarket</title>
+	<title>Login Admin blackmarket</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -27,15 +27,15 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
+		<div class="container-login100" style="background-color: grey;">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" method="POST" action="{{url('login')}}">
+				<form class="login100-form validate-form" method="POST" action="{{url('admin')}}">
 					<div class="login100-form-avatar">
 						<img src="images/avatar-01.jpg" alt="AVATAR">
 					</div>
 
 					<span class="login100-form-title p-t-20 p-b-45">
-						blackmarket
+						Login Admin
 					</span>'
 					@csrf'
 
@@ -68,13 +68,6 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
-					</div>
-					
-					<div class="text-center w-full p-t-25 p-b-230">
-						<a href="../register" class="txt1">
-							Create new account
-							<i class="fa fa-long-arrow-right"></i>	
-						</a>
 					</div>
 				</form>
 			</div>

@@ -47,7 +47,7 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
                         <a  href="{{url('admin/transaksi')}}"><i class="fa fa-qrcode fa-3x"></i>Transaksi</a>
                     </li>
 						   <li  >
-                        <a  href="{{url('admin/bank')}}"><i class="fa fa-bar-chart-o fa-3x"></i>Bank</a>
+                        <a  href="{{url('admin/bank')}}" class="active-menu"><i class="fa fa-bar-chart-o fa-3x"></i>Bank</a>
                     </li>	
                       <li  >
                         <a  href="{{url('admin/category')}}"><i class="fa fa-table fa-3x"></i>category</a>

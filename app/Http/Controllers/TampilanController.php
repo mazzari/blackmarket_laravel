@@ -13,6 +13,11 @@ class TampilanController extends Controller
         return view('login');
     }
 
+    public function adminLogin()
+    {
+        return view('admin/login');
+    }
+
     public function home()
     {
         return view('home');   

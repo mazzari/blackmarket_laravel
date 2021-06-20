@@ -24,6 +24,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/login',[TampilanController::class,'login']);
+Route::get('/logout',[AuthController::class,'logout']);
 Route::get('/home',[TampilanController::class,'home']);
 Route::get('/shop',[TampilanController::class,'shop']);
 Route::get('/register',[TampilanController::class,'register']);
@@ -35,6 +36,8 @@ Route::post('/login', [AuthController::class,'login']);
 Route::get('detailorder/{barang}',[TampilanController::class,'detailorder']);
 //order
 Route::post('pesan/{barang}',[OrderController::class,'simpan'])->name('checkouts');
+
+Route::get('admin/login',[TampilanController::class,'adminLogin']);
 //category
 Route::get('/admin/category',[CategoryController::class,'index']);
 Route::get('admin/category/add',[CategoryController::class,'create']);

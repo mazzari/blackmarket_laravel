@@ -22,7 +22,7 @@
 			<i class="fa fa-bars"></i>
 			<span class="sr-only">Toggle navigation</span>
 			</button>
-			<a href="index.php" class="navbar-brand brand"> blackmarket </a>
+			<a href="{{url('home') }}" class="navbar-brand brand"> blackmarket.jkt </a>
 		</div>
 		<div id="navbar-collapse-02" class="collapse navbar-collapse">
 		<ul class="nav navbar-nav navbar-right">

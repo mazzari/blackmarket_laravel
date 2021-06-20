@@ -39,6 +39,7 @@ font-size: 16px;"> <a href="../login" class="btn btn-danger square-btn-adjust">L
 				
 					
                   	
+                    	
                     <li>
                         <a  href="{{url('admin/index')}}"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
@@ -46,7 +47,7 @@ font-size: 16px;"> <a href="../login" class="btn btn-danger square-btn-adjust">L
                         <a  href="{{url('admin/datapelanggan')}}"><i class="fa fa-desktop fa-3x"></i> Data pelanggan</a>
                     </li>
                     <li>
-                        <a  href="{{url('admin/transaksi')}}"><i class="fa fa-qrcode fa-3x"></i>Transaksi</a>
+                        <a  href="{{url('admin/pemesanan')}}"><i class="fa fa-qrcode fa-3x"></i>Pemesanan</a>
                     </li>
 						   <li  >
                         <a  href="{{url('admin/bank')}}"><i class="fa fa-bar-chart-o fa-3x"></i>Bank</a>
@@ -55,10 +56,13 @@ font-size: 16px;"> <a href="../login" class="btn btn-danger square-btn-adjust">L
                         <a  href="{{url('admin/category')}}"><i class="fa fa-table fa-3x"></i>category</a>
                     </li>
                     <li>
-                        <a  href="{{url('admin/barang')}}"><i class="fa fa-table fa-3x"></i>Barang</a>
+                        <a  href="{{url('admin/barang')}}" class="active-menu"><i class="fa fa-table fa-3x"></i>Barang</a>
+                    </li>
+                    <li>
+                        <a  href="{{url('admin/order')}}"><i class="fa fa-table fa-3x"></i>Order</a>
                     </li>
                   <li>
-                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                       
                     </li>	
                 </ul>
                
