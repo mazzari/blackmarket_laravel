@@ -33,7 +33,11 @@ class AuthController extends Controller
 
             }
                else if(Auth::attempt(['email' => $req->email, 'password' => $req->password,'admin'=>0])){
+                  $req->session()->push('email', $req->email);
+                  $data = Session::all();
+                  
                   return redirect('home');
+                  
                }
              else
                 {
@@ -42,6 +46,11 @@ class AuthController extends Controller
    return redirect('login');
              }
 
+        }
+
+        public function logout(Request $req){
+           $req->session()->flush();
+           return redirect('home');
         }
 }
    

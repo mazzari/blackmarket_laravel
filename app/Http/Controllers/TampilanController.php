@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Barang;
 use App\Models\Bank;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class TampilanController extends Controller
@@ -16,6 +17,11 @@ class TampilanController extends Controller
     public function home()
     {
         return view('home');   
+    }
+    public function detailtransaksi()
+    {
+        $orders=Order::all()->last();
+        return view('detailtransaksi',compact('orders'));   
     }
 
     public function shop()
@@ -37,6 +43,9 @@ class TampilanController extends Controller
        $banks=Bank::all();
        return view('chekout', compact('barang','banks'));
        
+   }
+   public function personalinfo(){
+       return view('personalinfo');
    }
    public function contact()
    {

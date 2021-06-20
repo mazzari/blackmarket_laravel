@@ -14,7 +14,7 @@
   </head>
 
   <body>
-	
+	@extends('navbar')
 	<div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -53,6 +53,7 @@
 						<div class="action">
 							<a href="{{url('checkout')}}/{{$barang->id}}" class="add-to-cart btn btn-default" type="button">Purchase</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+							<a href="{{url('shop')}}" class="add-to-cart btn btn-default" type="button">Back</a>
 						</div>
 					</div>
 				</div>

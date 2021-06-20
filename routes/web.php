@@ -32,11 +32,14 @@ Route::get('chekout/{barang}',[TampilanController::class,'chekout']);
 Route::get('contact',[TampilanController::class,'contact']);
 Route::post('/register', [AuthController::class,'register_user']); 
 Route::post('/login', [AuthController::class,'login']); 
+Route::get('/logout', [AuthController::class,'logout']); 
+Route::get('/infopersonal',[TampilanController::class,'personalinfo']);
 Route::get('detailorder/{barang}',[TampilanController::class,'detailorder']);
 //order
 Route::post('pesan/{barang}',[OrderController::class,'simpan'])->name('checkouts');
+Route::get('detailtransaksi',[TampilanController::class,'detailtransaksi']);
 //category
-Route::get('/admin/category',[CategoryController::class,'index']);
+Route::get('admin/category',[CategoryController::class,'index']);
 Route::get('admin/category/add',[CategoryController::class,'create']);
 Route::get('admin/category/{cat}',[CategoryController::class,'edit']);
 Route::post('admin/category/{cat}',[CategoryController::class,'update']);

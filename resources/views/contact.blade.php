@@ -9,33 +9,15 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
-	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
-			<i class="fa fa-bars"></i>
-			<span class="sr-only">Toggle navigation</span>
-			</button>
-			<a href="index.php" class="navbar-brand brand"> blackmarket </a>
-		</div>
-		<div id="navbar-collapse-02" class="collapse navbar-collapse">
-		<ul class="nav navbar-nav navbar-right">
-			<li class="propClone"><a href="{{url('home') }}">Home</a></li>
-				<li class="propClone"><a href="{{url('shop')}}">Shop</a></li>
-				<li class="propClone"><a href="{{url('checkout')}}">Checkout</a></li>
-				<li class="propClone"><a href="{{url('contact')}}">Contact</a></li>
-				<li class="propClone"><a href="{{url('register')}}">Register</a></li>
-				<li class="propClone"><a href="{{url('login')}}">Login</a></li>
-			</ul>
-		</div>
-	</div>
-	</nav>
+	@extends('navbar')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">

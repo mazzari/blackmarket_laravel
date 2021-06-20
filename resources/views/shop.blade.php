@@ -9,6 +9,9 @@
 <link href= "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link href= {{ asset('css/style.css') }} rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
@@ -16,28 +19,7 @@
 <!-- HEADER =============================-->
 <header class="item header margin-top-0">
 <div class="wrapper">
-	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
-			<i class="fa fa-bars"></i>
-			<span class="sr-only">Toggle navigation</span>
-			</button>
-			<a href="index.html" class="navbar-brand brand"> blackmarket.jkt </a>
-		</div>
-		<div id="navbar-collapse-02" class="collapse navbar-collapse">
-		<ul class="nav navbar-nav navbar-right">
-		<li class="propClone"><a href="{{url('home') }}">Home</a></li>
-				<li class="propClone"><a href="{{url('shop')}}">Shop</a></li>
-				<li class="propClone"><a href="{{url('checkout')}}">Checkout</a></li>
-				<li class="propClone"><a href="{{url('contact')}}">Contact</a></li>
-				<li class="propClone"><a href="{{url('register')}}">Register</a></li>
-				<li class="propClone"><a href="{{url('login')}}">Login</a></li>
-	
-			</ul>
-		</div>
-	</div>
-	</nav>
+	@extends('navbar')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -75,13 +57,13 @@
 		<div class="productbox">
 			<div class="fadeshop">
 				<div class="captionshop text-center" style="display: none;">
-					<h3>{{$barang->nama}}</h3>
+					<h3><a href="{{url('detailorder')}}/{{$barang->id}}" style="color:white;">{{$barang->nama}} </a></h3>
 					<p>
 						{{$barang->detail}}
 					</p>
 					<p>
 						<a href="{{url('chekout')}}/{{$barang->id}}" class="learn-more detailslearn"><i class="fa fa-shopping-cart"></i> Purchase</a>
-						<a href="{{url('detailorder')}}/{{$barang->id}}" class="learn-more detailslearn"><i class="fa fa-link"></i> Details</a>
+						<a href="{{url('detailorder')}}/{{$barang->id}}" class="learn-more detailslearn"><span class="material-icons" style=": 0">shopping_cart</span></a>
 					</p>
 				</div>
 				<span class="maxproduct"><img src="{{$barang->photo}}" alt="images/jaket/jaketIjo1.jpg"></span>
